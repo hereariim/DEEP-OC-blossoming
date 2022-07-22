@@ -3,9 +3,13 @@
     "summary": "2D image segmentation based on UNET algorithm",
     "description": [
 		"This is blossoming application using DEEPaaS API",
-           "",
-           "**References**\n",
-           ""
+        "Apple tree flower are very sensitive to temperature",
+        "The study of their blossoming can give us interesting information about climate change",
+        "From raw image of blossoming apple tree, we want study the blossoming by segmentating flower",
+        "We suggest a 2D image segmentation model using DEEPaaS API",
+        "This model gives 2D RGB image and return binary image.",
+        "It is composed into three parts : resized into 256 x 256 pixels, image segmentation model based on UNET algorithm,",
+        "threshold optimization and resized into original sized"
 	],
     "keywords": [
         "docker",
