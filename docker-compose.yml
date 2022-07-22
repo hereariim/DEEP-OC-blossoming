@@ -1,0 +1,30 @@
+version: '2.3'
+
+# if 'docker-compose run' is used
+# do not forget '--service-ports'!
+
+services:
+    blossoming:
+      image: deephdc/deep-oc-blossoming
+      ports:
+        - 5000:5000
+        - 6006:6006
+      entrypoint: ["deepaas-run", "--listen-ip=0.0.0.0"]
+
+
+    blossoming-gpu:
+      image: deephdc/deep-oc-blossoming:gpu
+      runtime: nvidia
+      ports:
+        - 5000:5000
+        - 6006:6006
+      entrypoint: ["deepaas-run", "--listen-ip=0.0.0.0"]
+
+
+    blossoming-rclone:
+      extends:
+        service: blossoming
+      volumes:
+        - $HOME/.config/rclone:/srv/.rclone
+      environment:
+        - RCLONE_CONFIG=/srv/.rclone/rclone.conf
