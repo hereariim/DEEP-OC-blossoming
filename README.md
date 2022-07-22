@@ -17,11 +17,11 @@ To run the Docker container directly from Docker Hub and start using the API
 simply run the following command:
 
 ```bash
-$ docker run -ti -p 5000:5000 -p 6006:6006 deephdc/deep-oc-blossoming
+$ docker run -ti -p 5000:5000 -p 6006:6006 herearii/deep-oc-blossoming
 ```
 
 This command will pull the Docker container from the Docker Hub
-[deephdc](https://hub.docker.com/u/deephdc/) repository and start the default command (deepaas-run --listen-ip=0.0.0.0).
+[herearii](https://hub.docker.com/u/herearii/) repository and start the default command (deepaas-run --listen-ip=0.0.0.0).
 
 **N.B.** For either CPU-based or GPU-based images you can also use [udocker](https://github.com/indigo-dc/udocker).
 
@@ -56,14 +56,14 @@ Building the container:
 
     ```bash
     $ cd DEEP-OC-blossoming
-    $ docker build -t deephdc/deep-oc-blossoming .
+    $ docker build -t herearii/deep-oc-blossoming .
     ```
 
 3. Run the container (if you enable JupyterLab during the build, `--build-arg jlab=true`, 
 you should also add port 8888, i.e. `-p 8888:8888`):
 
     ```bash
-    $ docker run -ti -p 5000:5000 -p 6006:6006 deephdc/deep-oc-blossoming
+    $ docker run -ti -p 5000:5000 -p 6006:6006 herearii/deep-oc-blossoming
     ```
 
 These three steps will download the repository from GitHub and will build the

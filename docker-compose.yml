@@ -5,7 +5,7 @@ version: '2.3'
 
 services:
     blossoming:
-      image: deephdc/deep-oc-blossoming
+      image: herearii/deep-oc-blossoming
       ports:
         - 5000:5000
         - 6006:6006
@@ -13,7 +13,7 @@ services:
 
 
     blossoming-gpu:
-      image: deephdc/deep-oc-blossoming:gpu
+      image: herearii/deep-oc-blossoming:gpu
       runtime: nvidia
       ports:
         - 5000:5000
